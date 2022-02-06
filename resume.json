@@ -1,0 +1,34 @@
+{
+    "basics": {
+        "name" : "Ilagan, Christine",
+        "address" : "#404 Miranda Street, Angeles City, Pampanga",
+        "contact no." : "+63 947-375-2838",
+        "email" : "christinealejo43@gmail.com"
+    },
+    "objectives" : [{
+        "job objectives" : "Setting, preparing, and cleaning eating areas for new patrons."
+    }],
+    "education attainment" : {
+        "tertiary" : {
+            "name" : "Far Eastern University Diliman",
+            "address" : "Sampaguita Avenue, Mapayapa Village III, Quezon City, 1101"
+        },
+        "secondary" : {
+            "name" : "Holy Angel University",
+            "address" : "Sto. Rosario St., Angeles City, Pampanga"
+        },
+        "Primary" : {
+            "name" : "Cecilio Apostol Elementary School",
+            "address" : "Samson Rd., Caloocan City, Manila"
+        }
+    },
+    "work experience" : {
+        "position" : "casher",
+        "company" : "Jollibee",
+        "address" : "Nepo Mall, Angeles City, Pampanga"
+    },
+    "skills" : {
+        "1" : "Ability to learn quickly",
+        "2" : "Flexible"
+    }
+}
