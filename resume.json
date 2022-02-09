@@ -1,18 +1,33 @@
-{
-    "header" : [{ "Name" : "Christine S. Ilagan",
+[
+    {
+        "header1" : "PERSONAL INFORMATION",
+        "Name" : "Christine S. Ilagan",
         "Address": "#404 Miranda Street, Angeles City, Pampanga",
         "Contact No." : "+63 947-375-2838",
-        "Email" : "christinealejo43@gmail.com"
-        }],
-    "body" : [{
-        "OBJECTIVES" : "Seeking a challenging opportunity where I will be ab;e to utilize my strong organizational skills, educational background, and ability to work well with people, which will allow me to grow personally and professionally.",
-        "ACADEMIC BACKGROUND" :{
-            "Tertiary" : ["Far Eastern University Diliman", "Sampaguita Avenue, Mapayapa Village III, Quezon City, 1101"],
-            "Secondary" : ["Holy Angel University", "Sto. Rosario St., Angeles City, Pampanga"],
-            "Primary" : ["Cecilio Apostol Elementary School", "Samson Rd., Caloocan City, Manila"]
-        },
-        "WORK EXPERIENCE" : ["Casher", "Jollibee", "Nepo Mall, Angeles City, Pampanga"],
-        "SKILLS" : ["Ability to learn quickly", "Flexible"],
-        "REFERENCES" : ["Norman C. Eballe", "Government Employee (MSU-Naawan)", "09294567890"]
-    }]
-}
+        "Email" : "christinealejo43@gmail.com",   
+        "header2": "OBJECTIVES",
+        "OBJECTIVES" : "Seeking a challenging opportunity where I will be able to utilize my strong organizational skills, educational background, and ability to work well with people, which will allow me to grow personally and professionally.",
+        "header3": "ACADEMIC BACKGROUND",
+        "Tertiary" : "Far Eastern University Diliman", 
+        "TerAdd" : "Sampaguita Avenue, Mapayapa Village III, Quezon City, 1101",
+        "TerYear" : "2012-2016",
+        "Secondary" : "Holy Angel University", 
+        "SecAdd": "Sto. Rosario St., Angeles City, Pampanga",
+        "SecYear" : "2005-2009",
+        "Primary" : "Cecilio Apostol Elementary School", 
+        "PriAdd": "Samson Rd., Caloocan City, Manila",
+        "PriYear" : "1999-2005",
+        "header4" : "WORK EXPERIENCE",
+        "Work1": "Cashier",
+        "WorkYear" : "2009-2011",
+        "Company1": "Jollibee", 
+        "WorkAdd" : "Nepo Mall, Angeles City, Pampanga",
+        "header5": "SKILLS",
+        "Skill1" : "Ability to learn quickly", 
+        "Skill2": "Flexible", 
+        "header6": "REFERENCES",
+        "REFERENCE" : "Norman C. Eballe", 
+        "Occupation": "Government Employee (MSU-Naawan)", 
+        "RefContact": "+63 929-456-7890"
+    }
+]
