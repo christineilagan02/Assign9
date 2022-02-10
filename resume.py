@@ -18,7 +18,7 @@ class PDF(FPDF):
         # Line break
         self.ln(10)
 
-pdf = PDF('P', 'mm', "Letter")
+pdf = PDF('P', 'mm', "Legal")
 
 pdf.add_page()
 
@@ -63,6 +63,39 @@ for information in info:
     pdf.set_font('Times', '', 12)
     pdf.cell(0, 5, f"{information['SecAdd']}", align='R', ln=1)
     pdf.cell(0, 5, f"{information['SecYear']}", align='R', ln=1)
+    pdf.ln(3)
+    pdf.set_font('helvetica', 'B', 14)
+    pdf.cell(0, 5, "Primary             :  ", align='L')
+    pdf.set_font('Times', 'B', 12)
+    pdf.cell(0, 5, f"{information['Primary']}", align='R', ln=1)
+    pdf.set_font('Times', '', 12)
+    pdf.cell(0, 5, f"{information['PriAdd']}", align='R', ln=1)
+    pdf.cell(0, 5, f"{information['PriYear']}", align='R', ln=1)
+    pdf.ln(5)
+    pdf.set_font('helvetica', 'BI', 18)
+    pdf.cell(0, 10, f"{information['header4']}", 'BI', ln=1)
+    pdf.ln(3)
+    pdf.set_font('Times', 'B', 14)
+    pdf.cell(0, 5, f"{information['Work1']}", align='L', ln=1)
+    pdf.ln(1)
+    pdf.set_font('Times', '', 12)
+    pdf.cell(0, 5, f"{information['WorkCompany']}", align='L', ln=1)
+    pdf.cell(0, 5, f"{information['WorkAdd']}", align='L', ln=1)
+    pdf.cell(0, 5, f"{information['WorkYear']}", align='L', ln=1)
+    pdf.ln(5)
+    pdf.set_font('helvetica', 'BI', 18)
+    pdf.cell(0, 10, f"{information['header5']}", 'BI', ln=1)
+    pdf.ln(3)
+    pdf.set_font('helvetica', 'B', 18)
+    pdf.cell(0, 2, ". ", align='L')
+    pdf.set_font('Times', '', 12)
+    pdf.cell(0, 5, f"{information['Skill1']}", align='R', ln=1)
+    pdf.ln(3)
+    pdf.set_font('helvetica', 'B', 18)
+    pdf.cell(0, 2, ". ", align='L')
+    pdf.set_font('Times', '', 12)
+    pdf.cell(0, 5, f"{information['Skill2']}", align='R', ln=1)
+    pdf.ln(5)
 
 
 
