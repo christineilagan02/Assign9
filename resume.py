@@ -1,3 +1,18 @@
+#Assignment 9
+
+#PDF Resume Creator
+#	- Create a python program that will create your personal resume in PDF format
+#	- All personal details are stored in a JSON file
+#	- Your program should read the JSON file and write the details in the PDF
+#	- The output file should be: LASTNAME_FIRSTNAME.pdf
+
+#Note:
+#	- Search for available PDF library that you can use
+#	- Search how data is structured using JSON format
+#	- Search how to read JSON file
+#	- You will create the JSON file manually
+#	- Your code should be in github before Feb12
+
 from fpdf import FPDF
 import json
 
@@ -46,7 +61,7 @@ for information in info:
     pdf.cell(0, 5, f"{information['Objectives2']}", align='L', ln=1)
     pdf.ln(5)
     pdf.set_font('helvetica', 'BI', 18)
-    pdf.cell(0, 5, f"{information['header3']}", 'BI', ln=1)
+    pdf.cell(0, 10, f"{information['header3']}", 'BI', ln=1)
     pdf.ln(3)
     pdf.set_font('helvetica', 'B', 14)
     pdf.cell(0, 5, "Tertiary             :  ", align='L')
@@ -90,14 +105,59 @@ for information in info:
     pdf.cell(0, 2, ". ", align='L')
     pdf.set_font('Times', '', 12)
     pdf.cell(0, 5, f"{information['Skill1']}", align='R', ln=1)
-    pdf.ln(3)
     pdf.set_font('helvetica', 'B', 18)
     pdf.cell(0, 2, ". ", align='L')
     pdf.set_font('Times', '', 12)
     pdf.cell(0, 5, f"{information['Skill2']}", align='R', ln=1)
+    pdf.set_font('helvetica', 'B', 18)
+    pdf.cell(0, 2, ". ", align='L')
+    pdf.set_font('Times', '', 12)
+    pdf.cell(0, 5, f"{information['Skill3']}", align='R', ln=1)
+    pdf.set_font('helvetica', 'B', 18)
+    pdf.cell(0, 2, ". ", align='L')
+    pdf.set_font('Times', '', 12)
+    pdf.cell(0, 5, f"{information['Skill4']}", align='R', ln=1)
+    pdf.ln(5)
+    pdf.set_font('helvetica', 'BI', 18)
+    pdf.cell(0, 10, f"{information['header6']}", 'BI', ln=1)
+    pdf.ln(3)
+    pdf.set_font('Times', 'B', 14)
+    pdf.cell(0, 5, f"{information['REFERENCE']}", align='L', ln=1)
+    pdf.ln(1)
+    pdf.set_font('Times', '', 12)
+    pdf.cell(0, 5, f"{information['Occupation']}", align='L', ln=1)
+    pdf.cell(0, 5, f"{information['RefContact']}", align='L', ln=1)
     pdf.ln(5)
 
 
-
-
 pdf.output('ILAGAN_CHRISTINE.pdf')
+
+
+
+from PyPDF2 import PdfFileWriter, PdfFileReader
+
+def add_encryption(input_pdf, output_pdf, password):
+
+    pdf_writer = PdfFileWriter()
+
+    pdf_reader = PdfFileReader(input_pdf)
+
+    for page in range(pdf_reader.getNumPages()):
+
+        pdf_writer.addPage(pdf_reader.getPage(page))
+
+    pdf_writer.encrypt(user_pwd=password, owner_pwd=None, 
+
+                       use_128bit=True)
+
+    with open(output_pdf, 'wb') as fh:
+
+        pdf_writer.write(fh)
+
+if __name__ == '__main__':
+
+    add_encryption(input_pdf='ILAGAN_CHRISTINE.pdf',
+
+                   output_pdf='ILAGAN_CHRISTINE.pdf',
+
+                   password='Panda_Tine')
